@@ -7,26 +7,53 @@ All questions should be printed to your Browser's console using console.log()
 /*
 1. Create an array called ages that contains the following values: 3, 9, 23, 64, 2, 8, 28, 93.
 */
+
+// Beginning of code here
 console.log("1. Create array called ages");
+let ages = [3, 9, 23, 64, 2, 8, 28, 93];
+console.log("Ages:", ages);
+//End of code here
 
 /*
 1A Programmatically subtract the value of the first element in the array from the value in the last element of the array.
 Do not use numbers to reference the last element, find it programmatically.
 ages[7] - ages[0] is not allowed!
+
+\n creates pace between lines
 */
+
+// Beginning of code here
 console.log("\n1A. Substracting array");
+let minusAge = ages[ages.length - 1] - ages[0];
+console.log("minusAge", minusAge);
+//End of code here
+
 /*
 1B Add a new age to your array and repeat the step above to ensure it is dynamic. (works for arrays of different lengths).
 */
-console.log("1B. Adding new age to array");
 // Beginning of code here
+console.log("\n1B. Adding new age to array");
+ages.push(43);
+console.log("New age added", ages);
+let repeatMinusAge = ages[ages.length - 1] - ages[0];
+// 43 minus 3 equals 40
+console.log("repeatMinusAge", repeatMinusAge);
 //End of code here
 
 /*
 1C Use a loop to iterate through the array and calculate the average age.
 */
-console.log("1C. Looping through array");
-
+// Beginning of code here
+console.log("\n1C. Looping through array");
+let sumOfAges = 0;
+for (let i = 0; i < ages.length; i++) {
+  sumOfAges += ages[i];
+  console.log("index:", i, "sumOfAges:", sumOfAges);
+}
+// Im dividing the sum of all the ages and dividing by the number of ages
+let average = sumOfAges / ages.length;
+console.log("Average Age", average);
+//End of code here
 /*
 2. Create an array called names that contains the following values: 'Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'.
 Use a loop to iterate through the array and calculate the average number of letters per name.
