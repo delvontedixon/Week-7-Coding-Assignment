@@ -95,10 +95,14 @@ console.log("\n4. First element of the ages array:", ages[0]);
 5. Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
 For example:
 
-let names = ["Kelly", "Sam", "Kate"];    // starting with this array
-let nameLengths = [5, 3, 4];             // create a new array
+let names = ["Kelly", "Sam", "Kate"]; // starting with this array
+let nameLengths = [5, 3, 4];        // create a new array
 */
-
+let nameLengths = [];
+for (let i = 0; i < names.length; i++) {
+  nameLengths.push(names[i].length);
+  console.log("Name lengths array:", nameLengths);
+}
 /*
 6. Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
 */
