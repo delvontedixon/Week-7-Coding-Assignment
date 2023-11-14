@@ -19,7 +19,7 @@ console.log("Ages:", ages);
 Do not use numbers to reference the last element, find it programmatically.
 ages[7] - ages[0] is not allowed!
 
-\n creates pace between lines
+\n creates pace between lines-----
 */
 
 // Beginning of code here
@@ -54,32 +54,75 @@ for (let i = 0; i < ages.length; i++) {
 let average = sumOfAges / ages.length;
 console.log("Average Age", average);
 //End of code here
+
 /*
 2. Create an array called names that contains the following values: 'Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'.
-Use a loop to iterate through the array and calculate the average number of letters per name.
-Use a loop to iterate through the array again and concatenate all the names together, separated by spaces.
+*/
+console.log("\n2 Create Array of Names & 2A Loop for average letters");
+let names = ["Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"];
 
-How do you access the last element of any array?
+/*
+2A. Use a loop to iterate through the array and calculate the average number of letters per name.
+*/
+let totalLetters = 0;
+for (let i = 0; i < names.length; i++) {
+  totalLetters += names[i].length;
+  console.log("name:", names[i], "Total Letters:", totalLetters);
+}
+let averageName = totalLetters / names.length;
+console.log("Average Letters", averageName);
+/*
+2B. Use a loop to iterate through the array again and concatenate all the names together, separated by spaces.
+*/
+console.log("\n2B.");
+let concatNames = "";
+for (let i = 0; i < names.length; i++) {
+  concatNames = concatNames.concat(names[i] + " "); //the " " adds spaces to each name
+  console.log("Names concatenated", concatNames);
+}
+/*
+3. How do you access the last element of any array?
+*/
+console.log("\n3. Last element of the ages array:", ages[ages.length - 1]);
+/*
+4. How do you access the first element of any array?
+*/
+console.log("\n4. First element of the ages array:", ages[0]);
+/* --- Its [0] because in JS the numbers start from 0 instead of 1
 
-How do you access the first element of any array?
 
-Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
+
+5. Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
 For example:
 
 let names = ["Kelly", "Sam", "Kate"];    // starting with this array
 let nameLengths = [5, 3, 4];             // create a new array
+*/
 
-Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
+/*
+6. Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
+*/
 
-Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in 'Hello' and 3, I would expect the function to return 'HelloHelloHello').
+/*
+7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in 'Hello' and 3, I would expect the function to return 'HelloHelloHello').
+*/
 
-Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name should be the first and the last name separated by a space.
+/*
+8. Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name should be the first and the last name separated by a space.
+*/
 
-Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
+/*
+9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
+*/
 
-Write a function that takes an array of numbers and returns the average of all the elements in the array.
+/*
+10. Write a function that takes an array of numbers and returns the average of all the elements in the array.
+*/
 
-Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
+/*
+11. Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
+*/
 
-Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
+/*
+12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
 */
