@@ -98,6 +98,7 @@ For example:
 let names = ["Kelly", "Sam", "Kate"]; // starting with this array
 let nameLengths = [5, 3, 4];        // create a new array
 */
+console.log("\n5. ");
 let nameLengths = [];
 for (let i = 0; i < names.length; i++) {
   nameLengths.push(names[i].length);
@@ -106,6 +107,7 @@ for (let i = 0; i < names.length; i++) {
 /*
 6. Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
 */
+console.log("\n6. ");
 let lettersTotal = 0;
 for (let i = 0; i < nameLengths.length; i++) {
   lettersTotal += nameLengths[i];
@@ -114,6 +116,7 @@ for (let i = 0; i < nameLengths.length; i++) {
 /*
 7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in 'Hello' and 3, I would expect the function to return 'HelloHelloHello').
 */
+console.log("\n7. ");
 function concatWords(word, n) {
   let concat = word.repeat(n);
   console.log(concat);
@@ -122,6 +125,7 @@ concatWords("Hello", 3);
 /*
 8. Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name should be the first and the last name separated by a space.
 */
+console.log("\n8. ");
 function fullName(firstName, lastName) {
   let fullName = firstName + " " + lastName;
   console.log(fullName);
@@ -130,15 +134,83 @@ fullName("Delvonte", "Dixon");
 /*
 9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
 */
+console.log("\n9. ");
+let numbers1 = [100, 200, 300, 400];
+let numbers2 = [1, 2, 3, 4];
 
+function sumNumbersArray(array) {
+  let total = 0;
+  for (let i = 0; i < array.length; i++) {
+    total += array[i];
+    console.log("Total:", total);
+  }
+  if (total > 100) {
+    console.log(true);
+    return true;
+  } else {
+    console.log(false);
+    return false;
+  }
+}
+sumNumbersArray(numbers2);
 /*
 10. Write a function that takes an array of numbers and returns the average of all the elements in the array.
 */
+console.log("\n10. ");
+function calculateNumbersAverage(array) {
+  let total = 0;
 
+  for (let i = 0; i < array.length; i++) {
+    total += array[i];
+    console.log("Execute Function - total:", total);
+  }
+  let average = total / array.length;
+  console.log("Average:", average);
+}
+calculateNumbersAverage(numbers2);
 /*
 11. Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
 */
+console.log("\n11. ");
 
+let numbers3 = [500, 600, 700];
+let numbers4 = [50, 60, 700];
+
+function twoAverages(array1, array2) {
+  console.log("Parameters:", array1, array2);
+  let total1 = 0;
+  let total2 = 0;
+  for (const number of array1) {
+    total1 += number;
+    console.log("Number:", number, "Total1:", total1);
+  }
+  for (const number of array2) {
+    total2 += number;
+    console.log("Number:", number, "Total2:", total2);
+  }
+  let average1 = total1 / array1.length;
+  let average2 = total2 / array2.length;
+  console.log("Averages", average1, average2);
+
+  if (average1 > average2) {
+    console.log(true);
+    return true;
+  } else if (average1 < average2) {
+    console.log(false);
+    return false;
+  } else {
+    console.log("Equal Numbers");
+  }
+}
+twoAverages(numbers3, numbers4);
 /*
 12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
 */
+console.log("\n12. ");
+function willBuyDrink(isHotOutside, moneyInPocket) {
+  console.log("Parameters", isHotOutside, moneyInPocket);
+  let buyDrink = isHotOutside === true && moneyInPocket > 90;
+  console.log("Buy a drink?", buyDrink);
+  return buyDrink;
+}
+willBuyDrink(true, 100);
