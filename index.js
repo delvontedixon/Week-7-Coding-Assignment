@@ -152,7 +152,7 @@ function sumNumbersArray(array) {
     return false;
   }
 }
-sumNumbersArray(numbers2);
+sumNumbersArray(numbers1);
 /*
 10. Write a function that takes an array of numbers and returns the average of all the elements in the array.
 */
